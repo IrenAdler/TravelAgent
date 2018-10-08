@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Buy";
+}
+
+<div>
+    <h3>Форма оформления покупки</h3>
+    <form method="post" action="">
+        <input type="hidden" value="@ViewBag.TravelId" name="TravelId" />
+        <p>Имя Фамилия</p>
+        <input type="text" name="Name" />
+        
+        <p>Email</p>
+        <input type="text" name="Email" />
+
+        <input type="submit" value="Отправить" />
+    </form>
+</div>
+

@@ -1,0 +1,35 @@
+﻿
+@model TravelStores.Models.Travel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<dl>
+    <dt>Country</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Country)
+    </dd>
+
+    <dt>City</dt>
+    <dd>
+        @Html.DisplayFor(model => model.City)
+    </dd>
+
+    <dt>Hotel</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Hotel)
+    </dd>
+
+    <dt>Price</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Price)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить" />
+}
+

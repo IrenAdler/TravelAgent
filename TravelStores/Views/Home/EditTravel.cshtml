@@ -1,0 +1,43 @@
+﻿
+@model TravelStores.Models.Travel
+@{
+    ViewBag.Title = "EditTravel";
+    
+}
+
+
+<h2>Tour № @Model.TravelId</h2>
+@using (Html.BeginForm("EditTrvel", "Home", FormMethod.Post))
+{
+<fieldset>
+    @Html.HiddenFor(m => m.TravelId)
+    <p>
+        @Html.LabelFor(m => m.TravelId, "Id")
+        <br />
+        @Html.EditorFor(m => m.TravelId)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Country, "Country")
+        <br />
+        @Html.EditorFor(m => m.Country)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.City, "City")
+        <br />
+        @Html.EditorFor(m => m.City)
+
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Hotel, "Hotel")
+        <br />
+        @Html.EditorFor(m => m.Hotel)
+
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Price, "Price")
+        <br />
+        @Html.EditorFor(m => m.Price)
+    </p>
+    <p><input type="submit" value="Отправить" /></p>
+</fieldset>
+}
